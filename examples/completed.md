@@ -19,7 +19,7 @@ report renders as **Did not finish** and sets the commit status to `failure`.
 ## Succeeded, with baseline
 
 ````markdown
-### 2027 // Sign up and create a project — **Succeeded**
+### Firegoat // Sign up and create a project — **Succeeded**
 
 | Time | Cost | Errors | Interruptions |
 | --- | --- | --- | --- |
@@ -33,7 +33,7 @@ Sign up at acme.com, create a project named "demo", and copy the API key.
 
 > acme.com → `preview-pr-42.fly.dev`
 
-Commit `a1b2c3d`  ·  [View report →](https://2027.dev/evals/acme.com/reports/abc123)  ·  [Dashboard](https://2027.dev/evals/acme.com)
+Commit `a1b2c3d`  ·  [View report →](https://firegoat.ai/evals/acme.com/reports/abc123)  ·  [Dashboard](https://firegoat.ai/evals/acme.com)
 ````
 
 ## Succeeded, first run for this prompt
@@ -42,7 +42,7 @@ The baseline lookup (`GET /api/v1/runs?promptId=…&reportStatus=published`, pag
 found no prior succeeded run with metrics, so no arrows render.
 
 ````markdown
-### 2027 // Sign up and create a project — **Succeeded**
+### Firegoat // Sign up and create a project — **Succeeded**
 
 | Time | Cost | Errors | Interruptions |
 | --- | --- | --- | --- |
@@ -56,13 +56,13 @@ Sign up at acme.com, create a project named "demo", and copy the API key.
 
 > acme.com → `preview-pr-42.fly.dev`
 
-Commit `a1b2c3d`  ·  [View report →](https://2027.dev/evals/acme.com/reports/abc123)  ·  [Dashboard](https://2027.dev/evals/acme.com)
+Commit `a1b2c3d`  ·  [View report →](https://firegoat.ai/evals/acme.com/reports/abc123)  ·  [Dashboard](https://firegoat.ai/evals/acme.com)
 ````
 
 ## Did not finish
 
 ````markdown
-### 2027 // Sign up and create a project — Did not finish
+### Firegoat // Sign up and create a project — Did not finish
 
 ```diff
 - ⚠️ Score nulled: AI judge determined the task was not completed.
@@ -80,7 +80,7 @@ Sign up at acme.com, create a project named "demo", and copy the API key.
 
 > acme.com → `preview-pr-42.fly.dev`
 
-Commit `a1b2c3d`  ·  [View report →](https://2027.dev/evals/acme.com/reports/abc123)  ·  [Dashboard](https://2027.dev/evals/acme.com)
+Commit `a1b2c3d`  ·  [View report →](https://firegoat.ai/evals/acme.com/reports/abc123)  ·  [Dashboard](https://firegoat.ai/evals/acme.com)
 ````
 
 ---

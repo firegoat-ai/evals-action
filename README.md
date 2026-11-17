@@ -281,7 +281,7 @@ simply nothing to supersede.
 | Name | Required | Default | Description |
 |------|----------|---------|-------------|
 | `api-key` | yes | — | 2027 API key (store as repo secret) |
-| `api-base-url` | no | `https://2027.dev/evals` | Override for self-hosted evals deployments |
+| `api-base-url` | no | `https://firegoat.ai/evals` | Override for self-hosted evals deployments |
 | `prompt-id` | yes | — | Prompt UUID. List via `GET /api/v1/prompts`. |
 | `url-map` | conditional | `{}` | JSON object mapping production hostnames to preview URLs. Values must be full `http(s)` URLs (not bare hostnames). Optional when `template-vars` carries the prompt's variables (e.g. CLI / non-URL evals). |
 | `template-vars` | conditional | — | JSON object of values for the prompt's declared template variables (sent to the API as `templateArgs`). Required when the prompt declares non-empty `templateVars`; the server rejects the run otherwise with `400 Missing template vars`. |
@@ -378,7 +378,7 @@ via the marker `<!-- 2027-eval-comment:<promptId> -->`.
 
 ## API base URL
 
-`api-base-url` defaults to `https://2027.dev/evals`, the managed production
+`api-base-url` defaults to `https://firegoat.ai/evals`, the managed production
 deployment. The input exists so the action can point at a different API host
 in the future (self-hosted evals, staging) — there's no public alternative
 host today.
