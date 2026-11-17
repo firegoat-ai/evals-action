@@ -9,7 +9,7 @@ inputs:
   api-base-url:
     description: Base URL for the 2027 evals API
     required: false
-    default: https://2027.dev/evals
+    default: https://firegoat.ai/evals
   prompt-id:
     description: Prompt UUID. List available IDs via GET /api/v1/prompts.
     required: true

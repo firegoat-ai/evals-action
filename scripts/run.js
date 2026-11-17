@@ -346,7 +346,7 @@ function renderComment({ status, promptTitle, promptText, promptEndGoal, statusU
   }
 
   if (status === "failed") {
-    const lines = [`### 2027 // ${title} — Eval failed`]
+    const lines = [`### Firegoat // ${title} — Eval failed`]
     if (failureReason) {
       lines.push("", "```diff", `- ${sanitizeForFence(singleLine(failureReason))}`, "```")
     }
@@ -357,7 +357,7 @@ function renderComment({ status, promptTitle, promptText, promptEndGoal, statusU
 
   if (status !== "completed" && status !== "superseded") {
     const lines = [
-      `### 2027 // ${title} — Running…`,
+      `### Firegoat // ${title} — Running…`,
       "",
       "```",
       "  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒",
@@ -378,7 +378,7 @@ function renderComment({ status, promptTitle, promptText, promptEndGoal, statusU
   }
 
   if (status === "superseded") {
-    const lines = [`### 2027 // ${title} — Superseded`]
+    const lines = [`### Firegoat // ${title} — Superseded`]
     const foot = footer()
     if (foot) lines.push("", foot)
     return lines.join("\n")
@@ -387,8 +387,8 @@ function renderComment({ status, promptTitle, promptText, promptEndGoal, statusU
   // status === "completed"
   const succeeded = isSucceeded(report)
   const heading = succeeded
-    ? `### 2027 // ${title} — **Succeeded**`
-    : `### 2027 // ${title} — Did not finish`
+    ? `### Firegoat // ${title} — **Succeeded**`
+    : `### Firegoat // ${title} — Did not finish`
   const lines = [heading]
 
   if (!succeeded) {
@@ -556,7 +556,7 @@ async function lookupPrByNumber(github, owner, repo, number) {
 
 async function run({ core, github, context }) {
   const apiKey = process.env.EVALS_API_KEY
-  const apiBase = (process.env.EVALS_API_BASE_URL || "https://2027.dev/evals").replace(/\/$/, "")
+  const apiBase = (process.env.EVALS_API_BASE_URL || "https://firegoat.ai/evals").replace(/\/$/, "")
   const promptId = process.env.EVALS_PROMPT_ID || undefined
   const urlMapRaw = process.env.EVALS_URL_MAP || ""
   const templateVarsRaw = process.env.EVALS_TEMPLATE_VARS || ""
@@ -569,7 +569,7 @@ async function run({ core, github, context }) {
   const skipComment = String(process.env.EVALS_SKIP_COMMENT || "false").toLowerCase() === "true"
   const skipStatus = String(process.env.EVALS_SKIP_STATUS || "false").toLowerCase() === "true"
 
-  core.info(`2027 eval action: API base=${apiBase}`)
+  core.info(`Firegoat eval action: API base=${apiBase}`)
 
   if (!apiKey) {
     core.setFailed("api-key input is required")
